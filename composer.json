@@ -1,0 +1,39 @@
+{
+    "name": "state/og-wally",
+    "autoload": {
+        "psr-4": {
+            "State\\OgWally\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "OgWallyTests\\": "tests/"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Og Wally",
+            "description": "Og Wally addon"
+        },
+        "laravel": {
+            "providers": [
+                "State\\OgWally\\ServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "pestphp/pest": "^2.34",
+        "orchestra/testbench": "^9.1"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "pixelfear/composer-dist-plugin": true
+        }
+    },
+    "require": {
+        "intervention/image": "^2.7",
+        "illuminate/support": ">=10",
+        "statamic/cms": "^5.7"
+    }
+}
