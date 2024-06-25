@@ -1,6 +1,6 @@
 <?php
 
-use OgWallyTests\TestCase;
+use OgGeneratorTests\TestCase;
 
 /*
 |--------------------------------------------------------------------------

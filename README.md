@@ -1,6 +1,6 @@
-# Og Wally
+# Og Generator
 
-> Og Wally is a Statamic addon that does something pretty neat.
+> Og Generator is a Statamic addon that does something pretty neat.
 
 ## Features
 
@@ -15,7 +15,7 @@ This addon does:
 You can search for this addon in the `Tools > Addons` section of the Statamic control panel and click **install**, or run the following command from your project root:
 
 ``` bash
-composer require state/og-wally
+composer require state/og-generator
 ```
 
 ## How to Use

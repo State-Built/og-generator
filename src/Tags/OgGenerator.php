@@ -1,12 +1,12 @@
 <?php
 
-namespace State\OgWally\Tags;
+namespace State\OgGenerator\Tags;
 
 use Statamic\Tags\Tags;
-use State\OgWally\Image;
-use State\OgWally\Settings;
+use State\OgGenerator\Image;
+use State\OgGenerator\Settings;
 
-class OgWally extends Tags
+class OgGenerator extends Tags
 {
 
     public function image()
@@ -33,9 +33,9 @@ class OgWally extends Tags
 
     private function makeImageIfNotExists(string $title, string $filename)
     {
-        // if (file_exists(public_path("assets/{$filename}"))) {
-        //     return;
-        // }
+        if (file_exists(public_path("assets/{$filename}"))) {
+            return;
+        }
 
         Image::fromSettings(Settings::load())->text($title)->save("assets/{$filename}");
     }

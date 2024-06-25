@@ -1,6 +1,5 @@
 <?php
-use Intervention\Image\ImageManager;
-use State\OgWally\Image;
+use State\OgGenerator\Image;
 
 beforeEach(function() {
     if(file_exists("tests/results/result.png")) {

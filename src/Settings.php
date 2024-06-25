@@ -1,6 +1,6 @@
 <?php
 
-namespace State\OgWally;
+namespace State\OgGenerator;
 
 use Illuminate\Support\Collection;
 use Statamic\Facades\Blueprint;
@@ -50,7 +50,7 @@ class Settings extends Collection
 
     protected function path()
     {
-        return base_path('content/ogwally.yaml');
+        return base_path('content/og-generator.yaml');
     }
 
     public static function blueprint()

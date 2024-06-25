@@ -1,23 +1,32 @@
 {
-    "name": "state/og-wally",
+    "name": "state/og-generator",
     "autoload": {
         "psr-4": {
-            "State\\OgWally\\": "src"
+            "State\\OgGenerator\\": "src"
         }
     },
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Christian Pav",
+            "email": "christian@statebuilt.com",
+            "homepage": "https://statebuilt.com",
+            "role": "Developer"
+        }
+    ],
     "autoload-dev": {
         "psr-4": {
-            "OgWallyTests\\": "tests/"
+            "OgGeneratorTests\\": "tests/"
         }
     },
     "extra": {
         "statamic": {
-            "name": "Og Wally",
-            "description": "Og Wally addon"
+            "name": "OG Generator",
+            "description": "Generate OG images from your page's title."
         },
         "laravel": {
             "providers": [
-                "State\\OgWally\\ServiceProvider"
+                "State\\OgGenerator\\ServiceProvider"
             ]
         }
     },

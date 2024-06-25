@@ -1,12 +1,12 @@
 <?php
 
-namespace OgWallyTests;
+namespace OgGeneratorTests;
 
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 use Statamic\Extend\Manifest;
 use Statamic\Providers\StatamicServiceProvider;
 use Statamic\Statamic;
-use State\OgWally\ServiceProvider;
+use State\OgGenerator\ServiceProvider;
 use Intervention\Image\ImageServiceProvider;
 
 
@@ -34,9 +34,9 @@ class TestCase extends OrchestraTestCase
         parent::getEnvironmentSetUp($app);
 
         $app->make(Manifest::class)->manifest = [
-            'state/og-wally' => [
-                'id'        => 'state/og-wally',
-                'namespace' => 'State\\OgWally',
+            'state/og-generator' => [
+                'id'        => 'state/og-generator',
+                'namespace' => 'State\\og-generator',
             ],
         ];
     }

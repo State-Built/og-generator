@@ -1,12 +1,12 @@
 <?php
 
-namespace State\OgWally\Http\Controllers;
+namespace State\OgGenerator\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Statamic\Http\Controllers\CP\CpController;
 use Statamic\Support\Arr;
-use State\OgWally\Image;
-use State\OgWally\Settings;
+use State\OgGenerator\Image;
+use State\OgGenerator\Settings;
 
 class SettingsController extends CpController
 {
@@ -23,9 +23,9 @@ class SettingsController extends CpController
 
         $preview = Image::fromSettings($settings)->text('Lorem ipsum dolor sit amet, consectetur adipiscing elit');
 
-        return view('og-wally::settings', [
+        return view('og-generator::settings', [
             'title' => 'Config',
-            'action' => cp_route('ogwally.update'),
+            'action' => cp_route('og-generator.update'),
             'blueprint' => $blueprint->toPublishArray(),
             'meta' => $fields->meta(),
             'values' => $fields->values(),

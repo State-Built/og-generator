@@ -15,7 +15,7 @@
     ></publish-form>
     <script>
     function reloadPreview() {
-        fetch("/cp/ogwally/preview", {
+        fetch("/cp/og-generator/preview", {
             method: "GET",
         }).then(response => response.json()).then((data) => {
             document.getElementById("image-preview-wrapper").innerHTML = `<img src="${data.preview}">`;

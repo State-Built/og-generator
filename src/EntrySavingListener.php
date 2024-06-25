@@ -1,10 +1,10 @@
 <?php
-namespace State\OgWally;
+namespace State\OgGenerator;
 
 use Statamic\Entries\Entry;
 use Statamic\Events\EntrySaving;
-use State\OgWally\Image;
-use State\OgWally\Settings;
+use State\OgGenerator\Image;
+use State\OgGenerator\Settings;
 
 class EntrySavingListener
 {
@@ -21,7 +21,7 @@ class EntrySavingListener
                 ->text($entry->get('title'))
                 ->save("assets/$filename");
 
-            $entry->set('og_wally_image', $filename);
+            $entry->set('og_generator_image', $filename);
         }
     }
 

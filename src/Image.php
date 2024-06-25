@@ -1,6 +1,6 @@
 <?php
 
-namespace State\OgWally;
+namespace State\OgGenerator;
 
 
 class Image
@@ -95,6 +95,10 @@ class Image
 
     public function build()
     {
+        if(blank($this->font)) {
+            return;
+        }
+
         $text = $this->wrap > 0 ? $this->wrapText() : $this->text;
 
         $this->img->resize($this->width, $this->height);
@@ -145,7 +149,12 @@ class Image
             $instance = self::fromBgColor($settings->get('bg_color', '#000000'));
         }
 
-        $font = 'assets/' . $settings->get('font');
+        if($settings->get('font', false)) {
+            $font = 'assets/' . $settings->get('font');
+        }
+        else {
+            $font = '';
+        }
 
         return $instance->size($settings->get('width', 1920), $settings->get('height', 1080))
             ->fontSize($settings->get('font_size', 150))
