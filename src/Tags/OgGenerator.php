@@ -13,6 +13,11 @@ class OgGenerator extends Tags
     {
         $title = $this->context->get('title');
         $filename = $this->context->get('slug') . '.png';
+
+        if(!$title || !$filename) {
+            return "";
+        }
+
         $url = asset("assets/{$filename}");
 
         $this->makeImageIfNotExists($title, $filename);
@@ -24,6 +29,11 @@ class OgGenerator extends Tags
     {
         $title = $this->context->get('title');
         $filename = $this->context->get('slug') . '.png';
+
+        if(!$title || !$filename) {
+            return "";
+        }
+
         $url = asset("assets/{$filename}");
 
         $this->makeImageIfNotExists($title, $filename);
