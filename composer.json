@@ -22,7 +22,7 @@
     "extra": {
         "statamic": {
             "name": "OG Generator",
-            "description": "Generate OG images from your page's title."
+            "description": "Automatically generate images based on the title of your entries, customize backgrounds and fonts via the cp!"
         },
         "laravel": {
             "providers": [
